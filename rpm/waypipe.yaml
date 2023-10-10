@@ -39,6 +39,9 @@ Macros:
     %if 0%{?_chum}
     BuildRequires: lz4-devel
     %endif
+    %if 0%{?sailfishos_version} >= 40400
+    BuildRequires: pkgconfig(libzstd)
+    %endif
 #Patches:
 #  - 'baz'
 #Requires:
@@ -50,11 +53,11 @@ PkgBR:
    - ninja
    - ffmpeg-devel >= 3.1
    # lz4-devel # < only in Chum
-PkgConfigBR:
+#PkgConfigBR:
    # gbm     # <== DoD package
    # libdrm
    # zlib
-   - libzstd
+   # libzstd # <-- only in 4.4+
 Configure: none
 Builder: none
 NoIconCache: true

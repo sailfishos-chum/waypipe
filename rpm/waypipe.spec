@@ -12,6 +12,9 @@ Name:       waypipe
 %if 0%{?_chum}
 BuildRequires: lz4-devel
 %endif
+%if 0%{?sailfishos_version} >= 40400
+BuildRequires: pkgconfig(libzstd)
+%endif
 
 Summary:    Network transparency with Wayland
 Version:    0.8.6
@@ -22,7 +25,6 @@ URL:        https://gitlab.freedesktop.org/mstoeckl/waypipe/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  waypipe.yaml
 Source101:  waypipe-rpmlintrc
-BuildRequires:  pkgconfig(libzstd)
 BuildRequires:  cmake
 BuildRequires:  meson
 BuildRequires:  ninja
@@ -74,7 +76,6 @@ Links:
 --sharedstatedir=%{_sharedstatedir} \
 --wrap-mode=%{__meson_wrap_mode} \
 --auto-features=%{__meson_auto_features} \
--Dwith_zstd=enabled \
 -Dwith_video=enabled \
 -Dwith_dmabuf=disabled \
 -Dwith_vaapi=disabled \
