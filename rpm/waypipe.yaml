@@ -44,9 +44,10 @@ Macros:
     %endif
 #Patches:
 #  - 'baz'
-#Requires:
-#  - libsailfishapp-launcher
+Requires:
+   - sailfish-version > 3.2.1
 PkgBR:
+   - sailfish-version > 3.2.1
    # gcc
    - cmake
    - meson

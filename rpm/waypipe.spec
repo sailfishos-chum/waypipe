@@ -25,6 +25,8 @@ URL:        https://gitlab.freedesktop.org/mstoeckl/waypipe/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  waypipe.yaml
 Source101:  waypipe-rpmlintrc
+Requires:   sailfish-version > 3.2.1
+BuildRequires:  sailfish-version > 3.2.1
 BuildRequires:  cmake
 BuildRequires:  meson
 BuildRequires:  ninja
@@ -58,7 +60,8 @@ Links:
 
 %build
 # >> build pre
-
+#%%meson -Dwith_dmabuf=disabled -Dwith_vaapi=disabled -Dman-pages=disabled -Dwith_systemtap=false
+#%%meson_build
 %__meson setup %{_vpath_builddir} \
 --buildtype=plain \
 --prefix=%{_prefix} \
@@ -83,11 +86,8 @@ Links:
 -Dwith_neon_opts=%{?arm64:true}%{!?arm64:false} \
 -Dwith_lz4=%{?_chum:enabled}%{!?_chum:disabled} \
 -Dwith_systemtap=false
-#%%meson -Dwith_dmabuf=disabled -Dwith_vaapi=disabled -Dman-pages=disabled -Dwith_systemtap=false
 pushd %{_vpath_builddir}
-#%%meson_build
 %ninja_build
-#popd
 # << build pre
 
 
