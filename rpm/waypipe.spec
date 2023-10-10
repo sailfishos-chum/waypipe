@@ -14,6 +14,9 @@ BuildRequires: lz4-devel
 %endif
 %if 0%{?sailfishos_version} >= 40400
 BuildRequires: pkgconfig(libzstd)
+%define zstd_build enabled
+%else
+%define zstd_build disabled
 %endif
 
 Summary:    Network transparency with Wayland
@@ -87,6 +90,7 @@ Links:
 -Dwith_dmabuf=disabled \
 -Dwith_vaapi=disabled \
 -Dman-pages=disabled \
+-Dwith_zstd=%{zstd_build} \
 -Dwith_neon_opts=%{?arm64:true}%{!?arm64:false} \
 -Dwith_lz4=%{?_chum:enabled}%{!?_chum:disabled} \
 -Dwith_systemtap=false

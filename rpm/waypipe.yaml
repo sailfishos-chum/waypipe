@@ -45,6 +45,9 @@ Macros:
     %endif
     %if 0%{?sailfishos_version} >= 40400
     BuildRequires: pkgconfig(libzstd)
+    %define zstd_build enabled
+    %else
+    %define zstd_build disabled
     %endif
 #Patches:
 #  - 'baz'
