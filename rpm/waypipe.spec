@@ -17,7 +17,7 @@ Summary:    Network transparency with Wayland
 Version:    0.8.6
 Release:    0
 Group:      Applications
-License:    ASL 2.0
+License:    MIT
 URL:        https://gitlab.freedesktop.org/mstoeckl/waypipe/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  waypipe.yaml
@@ -40,11 +40,11 @@ Categories:
  - Utility
 Custom:
   Repo: %{url}
+  PackagingRepo: https://github.com/sailfishos-chum/waypipe
+  DescriptionMD: https://gitlab.freedesktop.org/mstoeckl/waypipe/-/raw/master/README.md
+PackageIcon: https://gitlab.freedesktop.org/uploads/-/system/project/avatar/3237/waypipe.png?width=128
 Links:
-  Homepage: %{url}
-  Help: %{url}/discussions
-  Bugtracker: %{url}/issues
-  Donation: https://openrepos.net/donate
+  Homepage: https://mstoeckl.com/notes/gsoc/blog.html
 %endif
 
 
