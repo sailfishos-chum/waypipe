@@ -33,7 +33,11 @@ BuildRequires:  ninja
 BuildRequires:  ffmpeg-devel >= 3.1
 
 %description
-%{summary}.
+waypipe is a proxy for Wayland clients.
+
+It forwards Wayland messages and serializes changes to shared
+memory buffers over a single socket. This makes application
+forwarding similar to ssh -X feasible.
 
 %if "%{?vendor}" == "chum"
 Title: Waypipe
