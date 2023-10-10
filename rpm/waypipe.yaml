@@ -7,8 +7,7 @@ License: ASL 2.0
 URL: https://gitlab.freedesktop.org/mstoeckl/waypipe/
 SCM: https://gitlab.freedesktop.org/mstoeckl/waypipe/
 Sources:
-    - '%{name}-v%{version}.tar.bz2'
-    # '%{name}.desktop' ## remember to adjust the Macro below...
+    - '%{name}-%{version}.tar.bz2'
 Description: |
     %{summary}.
 
@@ -35,10 +34,6 @@ RpmLintIgnore:
   - 'invalid-url'
 Macros:
   - '__meson_auto_features;disabled'
-#  - '_vpath_srcdir;%{_builddir}'
-#  - '_vpath_builddir'
-#  - '__cmake_in_source_build;OFF'
-#  - 'foo;bar'
   - |
     spectacle_bug; hack_fix
     %if 0%{?_chum}
@@ -63,9 +58,6 @@ PkgConfigBR:
 Configure: none
 Builder: none
 NoIconCache: true
-#BuildArch: noarch
-#AutoSubPackages:
-#  - doc
 Files:
   - '%license COPYING'
   - '%{_bindir}/*'

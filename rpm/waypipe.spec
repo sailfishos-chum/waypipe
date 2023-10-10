@@ -19,7 +19,7 @@ Release:    0
 Group:      Applications
 License:    ASL 2.0
 URL:        https://gitlab.freedesktop.org/mstoeckl/waypipe/
-Source0:    %{name}-v%{version}.tar.bz2
+Source0:    %{name}-%{version}.tar.bz2
 Source100:  waypipe.yaml
 Source101:  waypipe-rpmlintrc
 BuildRequires:  pkgconfig(libzstd)
