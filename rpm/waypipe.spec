@@ -56,6 +56,8 @@ Custom:
 PackageIcon: https://gitlab.freedesktop.org/uploads/-/system/project/avatar/3237/waypipe.png?width=128
 Links:
   Homepage: https://mstoeckl.com/notes/gsoc/blog.html
+  Help: https://forum.sailfishos.org/t/fun-with-remote-wayland-waypipe/16997
+  Bugtracker: https://github.com/sailfishos-chum/waypipe/issues
 %endif
 
 
