@@ -1,6 +1,6 @@
 Name: waypipe
 Summary: Network transparency with Wayland
-Version: 0.9.1
+Version: 0.9.2
 Release: 0
 Group: Applications
 License: MIT
@@ -8,6 +8,8 @@ URL: https://gitlab.freedesktop.org/mstoeckl/waypipe/
 SCM: https://gitlab.freedesktop.org/mstoeckl/waypipe/
 Sources:
     - '%{name}-%{version}.tar.bz2'
+#Patches:
+#  - 'baz'
 Description: |
     waypipe is a proxy for Wayland clients.
 
@@ -51,8 +53,6 @@ Macros:
     %else
     %define zstd_build disabled
     %endif
-#Patches:
-#  - 'baz'
 Requires:
    - sailfish-version > 3.2.1
 PkgBR:
