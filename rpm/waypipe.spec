@@ -42,12 +42,11 @@ Categories:
 Custom:
   Repo: %{url}
   PackagingRepo: https://github.com/sailfishos-chum/waypipe
-  DescriptionMD: https://gitlab.freedesktop.org/mstoeckl/waypipe/-/raw/master/README.md
+  DescriptionMD: https://gitlab.freedesktop.org/mstoeckl/waypipe/-/raw/v0.9.2/README.md
 PackageIcon: https://gitlab.freedesktop.org/uploads/-/system/project/avatar/3237/waypipe.png?width=128
 Links:
   Homepage: https://mstoeckl.com/notes/gsoc/blog.html
   Help: https://forum.sailfishos.org/t/fun-with-remote-wayland-waypipe/16997
-  Bugtracker: https://github.com/sailfishos-chum/waypipe/issues
 %endif
 
 
