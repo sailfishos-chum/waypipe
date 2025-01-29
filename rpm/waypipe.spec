@@ -7,6 +7,17 @@ Name:       waypipe
 
 # >> macros
 # << macros
+%define __meson_auto_features disabled
+%define spectacle_bug hack_fix
+%if 0%{?_chum}
+BuildRequires: lz4-devel
+%endif
+%if 0%{?sailfishos_version} >= 40400
+BuildRequires: pkgconfig(libzstd)
+%define zstd_build enabled
+%else
+%define zstd_build disabled
+%endif
 
 Summary:    Network transparency with Wayland
 Version:    0.9.2
@@ -49,18 +60,6 @@ Links:
   Help: https://forum.sailfishos.org/t/fun-with-remote-wayland-waypipe/16997
 %endif
 
-
-%define __meson_auto_features disabled
-%define please_ignore this macro
-%if 0%{?_chum}
-BuildRequires: lz4-devel
-%endif
-%if 0%{?sailfishos_version} >= 40400
-BuildRequires: pkgconfig(libzstd)
-%define zstd_build enabled
-%else
-%define zstd_build disabled
-%endif
 
 %prep
 %setup -q -n %{name}-%{version}/upstream
