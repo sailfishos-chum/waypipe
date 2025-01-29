@@ -10,7 +10,7 @@ URL: https://gitlab.freedesktop.org/mstoeckl/waypipe/
 SCM: https://gitlab.freedesktop.org/mstoeckl/waypipe/
 Sources:
     - '%{name}-%{version}.tar.bz2'
-    - vendor-%{version}.tar.xz
+    - vendor.tar.xz
 #Patches:
 #  - 'baz'
 Description: |

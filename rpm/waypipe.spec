@@ -26,7 +26,7 @@ Group:      Applications
 License:    MIT and GPLv3+
 URL:        https://gitlab.freedesktop.org/mstoeckl/waypipe/
 Source0:    %{name}-%{version}.tar.bz2
-Source1:    vendor-%{version}.tar.xz
+Source1:    vendor.tar.xz
 Source100:  waypipe.yaml
 Source101:  waypipe-rpmlintrc
 Requires:   sailfish-version > 3.2.1
