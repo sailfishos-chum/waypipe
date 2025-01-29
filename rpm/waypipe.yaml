@@ -42,10 +42,10 @@ RpmLintIgnore:
   - 'summary-too-long'
   - 'no-changelogname-tag'
   - 'invalid-url'
-Macros:
+Macros2:
   - '__meson_auto_features;disabled'
   - |
-    spectacle_bug; hack_fix
+    please_ignore;this macro
     %if 0%{?_chum}
     BuildRequires: lz4-devel
     %endif
