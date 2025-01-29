@@ -35,7 +35,7 @@ BuildRequires:  meson
 BuildRequires:  ninja
 BuildRequires:  ffmpeg-devel >= 3.1
 BuildRequires:  cargo
-BuildRequires:  rust >= 1.56.0
+BuildRequires:  rust >= 1.77.0
 
 %description
 waypipe is a proxy for Wayland clients.
