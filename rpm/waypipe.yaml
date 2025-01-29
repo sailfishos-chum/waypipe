@@ -2,14 +2,15 @@ Name: waypipe
 Summary: Network transparency with Wayland
 # Note: 0.9.x is C, 0.10.x is rust!
 # and 0.9.2 has a bug, so use the version from branch backport-v0.9.2
-Version: 0.9.2
+Version: 0.10.2
 Release: 0
 Group: Applications
-License: MIT
+License: MIT and GPLv3+
 URL: https://gitlab.freedesktop.org/mstoeckl/waypipe/
 SCM: https://gitlab.freedesktop.org/mstoeckl/waypipe/
 Sources:
     - '%{name}-%{version}.tar.bz2'
+    - vendor-%{version}.tar.xz
 #Patches:
 #  - 'baz'
 Description: |
@@ -37,7 +38,7 @@ Description: |
       Bugtracker: https://github.com/sailfishos-chum/waypipe/issues
     %endif
 
-SetupOptions: -q -n %{name}-%{version}/upstream
+SetupOptions: -q -a1 -n %{name}-%{version}/upstream
 RpmLintIgnore:
   - 'summary-too-long'
   - 'no-changelogname-tag'
@@ -59,12 +60,13 @@ Requires:
    - sailfish-version > 3.2.1
 PkgBR:
    - sailfish-version > 3.2.1
-   # gcc
-   - cmake
+   # cmake
    - meson
    - ninja
    - ffmpeg-devel >= 3.1
    # lz4-devel # < only in Chum
+   - cargo
+   - rust >= 1.56.0
 #PkgConfigBR:
    # gbm     # <== DoD package
    # libdrm
