@@ -18,6 +18,7 @@ Source0:    %{name}-%{version}.tar.bz2
 Source100:  waypipe.yaml
 Source101:  waypipe-rpmlintrc
 Requires:   sailfish-version > 3.2.1
+BuildRequires:  pkgconfig(libwayland-client)
 BuildRequires:  sailfish-version > 3.2.1
 BuildRequires:  cmake
 BuildRequires:  meson

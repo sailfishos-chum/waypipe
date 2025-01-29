@@ -65,7 +65,8 @@ PkgBR:
    - ninja
    - ffmpeg-devel >= 3.1
    # lz4-devel # < only in Chum
-#PkgConfigBR:
+PkgConfigBR:
+   - libwayland-client
    # gbm     # <== DoD package
    # libdrm
    # zlib
