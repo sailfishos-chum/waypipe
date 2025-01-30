@@ -32,7 +32,7 @@ BuildRequires:  pkgconfig(wayland-client)
 BuildRequires:  pkgconfig(libavcodec)
 BuildRequires:  pkgconfig(libavutil)
 BuildRequires:  pkgconfig(libswscale)
-BuildRequires:  sailfish-version > 3.2.1
+BuildRequires:  sailfish-version > 3.4.0
 BuildRequires:  cmake
 BuildRequires:  meson
 BuildRequires:  ninja
@@ -66,7 +66,6 @@ Links:
 Summary:    Network transparency with Wayland
 License:    MIT
 Group:      Applications
-Requires:   sailfish-version > 3.2.1
 Provides:   waypipe-bin
 Obsoletes:  waypipe <= 0.9.2
 Obsoletes:  waypipe >= 0.8.6
