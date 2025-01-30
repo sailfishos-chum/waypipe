@@ -6,7 +6,7 @@ Summary: Network transparency with Wayland
 Version: 0.10.2
 Release: 0
 Group: Applications
-License: MIT
+License: GPLv3
 URL: https://gitlab.freedesktop.org/mstoeckl/waypipe/
 SCM: https://gitlab.freedesktop.org/mstoeckl/waypipe/
 Sources:
@@ -55,8 +55,6 @@ Macros:
     %else
     %define zstd_build disabled
     %endif
-Requires:
-   - sailfish-version > 3.2.1
 PkgBR:
    - sailfish-version > 3.2.1
    # gcc
@@ -76,7 +74,26 @@ PkgConfigBR:
    # libzstd # <-- only in 4.4+
 Configure: none
 Builder: none
-NoIconCache: true
-Files:
-  - '%license COPYING'
-  - '%{_bindir}/*'
+NoFiles: true
+SubPackages:
+#    - Name:  rs
+#      License: MIT
+#      Group: Applications
+#      AutoDepend: false
+#      Provides:
+#         - waypipe-bin
+#      Files:
+#        - '%license LICENSE.GPLv3'
+#        - '%{_bindir}/waypipe'
+    - Name:  c
+      Summary: Network transparency with Wayland
+      License: MIT
+      Group: Applications
+      AutoDepend: false
+      Requires:
+         - sailfish-version > 3.2.1
+      Provides:
+         - waypipe-bin
+      Files:
+        - '%license LICENSE.MIT'
+        - '%{_bindir}/waypipe-c'
