@@ -92,6 +92,9 @@ SubPackages:
       AutoDepend: false
       Requires:
          - sailfish-version > 3.2.1
+      Obsoletes:
+         - waypipe <= 0.9.2
+         - waypipe >= 0.8.6
       Provides:
          - waypipe-bin
       Files:
