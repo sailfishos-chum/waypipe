@@ -20,7 +20,7 @@ BuildRequires: pkgconfig(libzstd)
 %endif
 
 Summary:    Network transparency with Wayland
-Version:    0.10.2
+Version:    0.10.4
 Release:    0
 Group:      Applications
 License:    GPLv3
@@ -44,7 +44,7 @@ It forwards Wayland messages and serializes changes to shared
 memory buffers over a single socket. This makes application
 forwarding similar to ssh -X feasible.
 
-%if "%{?vendor}" == "chum"
+%if 0%{?_chum}
 Title: Waypipe
 Type: console-application
 DeveloperName: M. Stoeckl
@@ -54,7 +54,7 @@ Categories:
 Custom:
   Repo: %{url}
   PackagingRepo: https://github.com/sailfishos-chum/waypipe
-  DescriptionMD: https://gitlab.freedesktop.org/mstoeckl/waypipe/-/raw/v0.9.2/README.md
+  DescriptionMD: https://gitlab.freedesktop.org/mstoeckl/waypipe/-/blob/v0.10.4/README.md
 PackageIcon: https://gitlab.freedesktop.org/uploads/-/system/project/avatar/3237/waypipe.png?width=128
 Links:
   Homepage: https://mstoeckl.com/notes/gsoc/blog.html
