@@ -40,6 +40,7 @@ PkgBR:
    - rust
    - cargo
    - git
+   - cbindgen
    - cmake
    - meson
    - ninja
