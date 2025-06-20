@@ -37,6 +37,7 @@ Macros:
 PkgBR:
    - sailfish-version > 3.4.0
    # gcc
+   - rust
    - cmake
    - meson
    - ninja
@@ -55,15 +56,16 @@ Configure: none
 Builder: none
 NoFiles: true
 SubPackages:
-#    - Name:  rs
-#      License: MIT
-#      Group: Applications
-#      AutoDepend: false
-#      Provides:
-#         - waypipe-bin
-#      Files:
-#        - '%license LICENSE.GPLv3'
-#        - '%{_bindir}/waypipe'
+    - Name:  rs
+      Summary: Network transparency with Wayland
+      License: MIT
+      Group: Applications
+      AutoDepend: false
+      Provides:
+         - waypipe-bin
+      Files:
+        - '%license LICENSE.GPLv3'
+        - '%{_bindir}/waypipe'
     - Name:  c
       Summary: Network transparency with Wayland
       License: MIT

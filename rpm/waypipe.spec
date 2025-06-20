@@ -33,6 +33,7 @@ BuildRequires:  pkgconfig(libavcodec)
 BuildRequires:  pkgconfig(libavutil)
 BuildRequires:  pkgconfig(libswscale)
 BuildRequires:  sailfish-version > 3.4.0
+BuildRequires:  rust
 BuildRequires:  cmake
 BuildRequires:  meson
 BuildRequires:  ninja
@@ -40,6 +41,15 @@ BuildRequires:  ninja
 %description
 %{summary}.
 
+
+%package rs
+Summary:    Network transparency with Wayland
+License:    MIT
+Group:      Applications
+Provides:   waypipe-bin
+
+%description rs
+%{summary}.
 
 %package c
 Summary:    Network transparency with Wayland
@@ -103,7 +113,7 @@ Links:
 --wrap-mode=%{__meson_wrap_mode} \
 --auto-features=%{__meson_auto_features} \
 -Dbuild_c=true \
--Dbuild_rs=false \
+-Dbuild_rs=true \
 -Dtests=false \
 -Dwith_video=enabled \
 -Dwith_dmabuf=disabled \
@@ -135,6 +145,13 @@ rm -rf %{buildroot}
 # >> install post
 # << install post
 
+
+%files rs
+%defattr(-,root,root,-)
+%license LICENSE.GPLv3
+%{_bindir}/waypipe
+# >> files rs
+# << files rs
 
 %files c
 %defattr(-,root,root,-)
