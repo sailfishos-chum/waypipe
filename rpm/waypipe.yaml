@@ -41,6 +41,7 @@ PkgBR:
    - cargo
    - git
    - cbindgen
+   - rust-cbindgen
    - cmake
    - meson
    - ninja
