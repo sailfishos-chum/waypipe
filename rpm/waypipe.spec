@@ -36,7 +36,8 @@ BuildRequires:  sailfish-version > 3.4.0
 BuildRequires:  rust
 BuildRequires:  cargo
 BuildRequires:  git
-BuildRequires:  cbindgen
+BuildRequires:  bindgen >= 0.70.0
+BuildRequires:  clang
 BuildRequires:  cmake
 BuildRequires:  meson
 BuildRequires:  ninja

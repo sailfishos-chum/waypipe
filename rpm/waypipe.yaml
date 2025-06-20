@@ -40,7 +40,9 @@ PkgBR:
    - rust
    - cargo
    - git
-   - cbindgen
+   # NOTW: not cbindgen!
+   - bindgen >= 0.70.0
+   - clang
    - cmake
    - meson
    - ninja
