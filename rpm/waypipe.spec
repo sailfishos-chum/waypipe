@@ -38,6 +38,18 @@ BuildRequires:  meson
 BuildRequires:  ninja
 
 %description
+%{summary}.
+
+
+%package c
+Summary:    Network transparency with Wayland
+License:    MIT
+Group:      Applications
+Provides:   waypipe-bin
+Obsoletes:  waypipe <= 0.9.2
+Obsoletes:  waypipe >= 0.8.6
+
+%description c
 waypipe is a proxy for Wayland clients.
 
 It forwards Wayland messages and serializes changes to shared
@@ -50,28 +62,18 @@ Type: console-application
 DeveloperName: M. Stoeckl
 PackagedBy: nephros
 Categories:
+ - Networking
  - Utility
 Custom:
   Repo: %{url}
   PackagingRepo: https://github.com/sailfishos-chum/waypipe
-  DescriptionMD: https://gitlab.freedesktop.org/mstoeckl/waypipe/-/blob/v0.10.4/README.md
-PackageIcon: https://gitlab.freedesktop.org/uploads/-/system/project/avatar/3237/waypipe.png?width=128
+  DescriptionMD: https://gitlab.freedesktop.org/mstoeckl/waypipe/-/raw/v0.10.4/README.md
+PackageIcon: https://gitlab.freedesktop.org/uploads/-/system/project/avatar/3237/waypipe.png
 Links:
   Homepage: https://mstoeckl.com/notes/gsoc/blog.html
   Help: https://forum.sailfishos.org/t/fun-with-remote-wayland-waypipe/16997
 %endif
 
-
-%package c
-Summary:    Network transparency with Wayland
-License:    MIT
-Group:      Applications
-Provides:   waypipe-bin
-Obsoletes:  waypipe <= 0.9.2
-Obsoletes:  waypipe >= 0.8.6
-
-%description c
-%{summary}.
 
 %prep
 %setup -q -n %{name}-%{version}/upstream
