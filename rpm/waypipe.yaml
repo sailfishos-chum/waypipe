@@ -38,6 +38,8 @@ PkgBR:
    - sailfish-version > 3.4.0
    # gcc
    - rust
+   - cargo
+   - git
    - cmake
    - meson
    - ninja

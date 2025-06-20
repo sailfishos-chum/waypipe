@@ -34,6 +34,8 @@ BuildRequires:  pkgconfig(libavutil)
 BuildRequires:  pkgconfig(libswscale)
 BuildRequires:  sailfish-version > 3.4.0
 BuildRequires:  rust
+BuildRequires:  cargo
+BuildRequires:  git
 BuildRequires:  cmake
 BuildRequires:  meson
 BuildRequires:  ninja
