@@ -37,7 +37,6 @@ BuildRequires:  rust
 BuildRequires:  cargo
 BuildRequires:  git
 BuildRequires:  cbindgen
-BuildRequires:  rust-cbindgen
 BuildRequires:  cmake
 BuildRequires:  meson
 BuildRequires:  ninja
