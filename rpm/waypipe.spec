@@ -20,7 +20,7 @@ BuildRequires: pkgconfig(libzstd)
 %endif
 
 Summary:    Network transparency with Wayland
-Version:    0.10.5
+Version:    0.11.0
 Release:    0
 Group:      Applications
 License:    GPLv3
