@@ -1,7 +1,6 @@
 Name: waypipe
 Summary: Network transparency with Wayland
-# also, update DescriptionMD version below in the chum meta section
-Version: 0.11.0
+Version: 0.11.3
 Release: 0
 Group: Applications
 License: GPLv3
